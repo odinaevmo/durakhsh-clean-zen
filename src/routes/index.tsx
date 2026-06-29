@@ -22,7 +22,7 @@ import heroImg from "@/assets/hero-cleaning.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
-import logoAsset from "@/assets/logo-site.jpg.asset.json";
+const logoAsset = { url: "/logo-site.jpg" };
 import { sendTelegramOrder } from "@/lib/telegram-config";
 
 export const Route = createFileRoute("/")({
