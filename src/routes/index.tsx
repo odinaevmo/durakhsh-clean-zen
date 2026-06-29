@@ -22,6 +22,7 @@ import heroImg from "@/assets/hero-cleaning.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
+import logoAsset from "@/assets/logo-site.jpg.asset.json";
 import { sendTelegramOrder } from "@/lib/telegram-config";
 
 export const Route = createFileRoute("/")({
@@ -96,15 +97,13 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-lg">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:px-8">
-        <a href="#top" className="flex min-w-0 items-center gap-2">
-          <div className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-soft">
-            <Sparkles className="h-5 w-5" />
-          </div>
-          <div className="min-w-0">
-            <p className="truncate text-sm font-bold text-foreground">Durakhsh Dushanbe</p>
-            <p className="truncate text-[11px] text-muted-foreground">Профессиональный клининг</p>
-          </div>
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:px-8">
+        <a href="#top" className="flex min-w-0 items-center">
+          <img
+            src={logoAsset.url}
+            alt="Durakhsh Dushanbe — логотип"
+            className="h-14 w-auto object-contain sm:h-16"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
